@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Pemberitahuan Penghentian</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html,
+      body {
+        height: 100%;
+        font-family: Arial, Helvetica, sans-serif;
+        background: #fafafa;
+        color: #222;
+      }
+      .wrap {
+        max-width: 880px;
+        margin: 20px auto;
+        background: #fff;
+        border-radius: 8px;
+        border: 1px solid #e6e6e6;
+        overflow: hidden;
+      }
+      .top {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 16px 20px;
+      }
+      .avatar {
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        background: #cfe3ff;
+        color: #1a73e8;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+      }
+      .sender {
+        font-weight: 700;
+      }
+      .meta {
+        margin-left: auto;
+        color: #6b6f76;
+        font-size: 13px;
+      }
+      .titlebar {
+        padding: 18px 24px;
+        border-bottom: 1px solid #eee;
+      }
+      .titlebar h1 {
+        font-size: 20px;
+        color: #333;
+        font-weight: 600;
+      }
+      .body {
+        display: flex;
+        gap: 24px;
+        padding: 26px;
+      }
+      .left {
+        flex: 1;
+      }
+      .office {
+        width: 160px;
+      }
+      .notice {
+        background: #fff;
+        padding: 6px 12px;
+        border-radius: 4px;
+      }
+      .notice h3 {
+        margin-bottom: 8px;
+        color: #333;
+      }
+      .notice p {
+        color: #333;
+        line-height: 1.5;
+        margin-bottom: 12px;
+      }
+      .notice .info {
+        background: #f7f7f7;
+        padding: 12px;
+        border-radius: 4px;
+        color: #444;
+        margin-bottom: 12px;
+      }
+      .notice a.phish {
+        display: inline-block;
+        background: #1a73e8;
+        color: #fff;
+        padding: 10px 14px;
+        border-radius: 4px;
+        text-decoration: none;
+        font-weight: 600;
+      }
+      .footer {
+        padding: 18px 24px;
+        color: #6b6f76;
+        font-size: 13px;
+        border-top: 1px solid #f0f0f0;
+      }
+      @media (max-width: 720px) {
+        .body {
+          flex-direction: column;
+        }
+        .office {
+          width: 100%;
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="top">
+        <div class="avatar">HD</div>
+        <div>
+          <div class="sender">Help Desk &lt;helpdesk@itss.co.id&gt;</div>
+          <div style="font-size: 13px; color: #6b6f76">kepada saya</div>
+        </div>
+        <div class="meta">Rabu, 5 November 2025 pukul 10:09</div>
+      </div>
+
+      <div class="titlebar">
+        <h1>Pemberitahuan Penghentian</h1>
+      </div>
+
+      <div class="body">
+        <div class="left">
+          <img
+            class="office"
+            src="../assets/logo/office365-logo.png"
+            alt="Office 365"
+            onerror="this.style.display='none'"
+          />
+
+          <div class="notice" role="article">
+            <p>Pemberitahuan dari Departemen TI kami</p>
+
+            <p class="info">
+              Catatan kami menunjukkan bahwa Anda baru-baru ini mengajukan
+              permintaan untuk menghentikan email Office365 Anda. Proses ini
+              telah dimulai oleh administrator kami.
+            </p>
+
+            <p>
+              Jika permintaan ini dilakukan secara tidak sengaja dan Anda tidak
+              mengetahuinya, disarankan untuk membatalkan permintaan sekarang.
+            </p>
+
+            <p>
+              Silakan beri kami waktu 24 jam untuk menghentikan akun Anda ATAU
+              hubungi nomor dukungan kami di 62-857-946-2279 untuk berbicara
+              dengan perwakilan layanan pelanggan.
+            </p>
+
+            <p>
+              Gagal membatalkan penghentian akan mengakibatkan penutupan akun
+              Anda
+            </p>
+
+            <p>Terima kasih</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer">&nbsp;</div>
+    </div>
+  </body>
+</html>

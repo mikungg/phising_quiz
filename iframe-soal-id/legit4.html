@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Goodreads - Notifikasi Masuk</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        height: 100%;
+        font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        background: #f4f1ea;
+        color: #333333;
+      }
+      .container {
+        max-width: 700px;
+        margin: 0 auto;
+        background: #ffffff;
+        min-height: 100vh;
+      }
+      /* email-like header styles (avatar, sender, meta) */
+      .top {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 16px 20px;
+        border-bottom: 1px solid #e8e8e8;
+      }
+      .avatar {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: #f4f1ea;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        font-weight: 600;
+        font-size: 16px;
+        color: #382110;
+      }
+      .sender {
+        font-weight: 600;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+      .meta {
+        margin-left: auto;
+        color: #666666;
+        font-size: 12px;
+      }
+      .account-info {
+        font-size: 13px;
+        color: #666666;
+      }
+
+      /* Header with logo */
+      .header {
+        padding: 30px 40px 20px;
+        border-bottom: 1px solid #e8e8e8;
+      }
+      .logo {
+        font-family: "Merriweather", Georgia, serif;
+        font-size: 28px;
+        font-weight: 400;
+        color: #382110;
+        text-decoration: none;
+        letter-spacing: -0.5px;
+      }
+
+      /* Main content */
+      .content {
+        padding: 40px 40px;
+      }
+      .greeting {
+        font-size: 16px;
+        color: #333333;
+        margin-bottom: 24px;
+        line-height: 1.5;
+      }
+      .message {
+        font-size: 16px;
+        color: #333333;
+        margin-bottom: 28px;
+        line-height: 1.5;
+      }
+      .details-box {
+        background: #ffffff;
+        border: 1px solid #d8d8d8;
+        border-radius: 3px;
+        padding: 24px;
+        margin-bottom: 28px;
+      }
+      .detail-row {
+        display: flex;
+        margin-bottom: 12px;
+        font-size: 15px;
+      }
+      .detail-row:last-child {
+        margin-bottom: 0;
+      }
+      .detail-label {
+        font-weight: 600;
+        color: #333333;
+        min-width: 80px;
+        margin-right: 12px;
+      }
+      .detail-value {
+        color: #333333;
+        flex: 1;
+      }
+      .footer-message {
+        font-size: 16px;
+        color: #333333;
+        line-height: 1.6;
+        margin-bottom: 8px;
+      }
+      .footer-message a {
+        color: #00635d;
+        text-decoration: none;
+      }
+      .footer-message a:hover {
+        text-decoration: underline;
+      }
+
+      /* Safety notice box */
+      .safety-box {
+        background: #f9f9f9;
+        border: 1px solid #d8d8d8;
+        border-radius: 3px;
+        padding: 24px;
+        margin-top: 32px;
+      }
+      .safety-title {
+        font-size: 16px;
+        font-weight: 600;
+        color: #333333;
+        margin-bottom: 16px;
+      }
+      .safety-text {
+        font-size: 14px;
+        color: #333333;
+        line-height: 1.6;
+        margin-bottom: 16px;
+      }
+      .safety-link {
+        font-size: 14px;
+        color: #333333;
+        background: #e8e8e8;
+        padding: 12px;
+        border-radius: 3px;
+        word-break: break-all;
+        font-family: monospace;
+      }
+
+      .footer {
+        padding: 30px 40px;
+        background: #f4f1ea;
+        text-align: center;
+        font-size: 12px;
+        color: #767676;
+        line-height: 1.6;
+        border-top: 1px solid #e8e8e8;
+      }
+      .footer a {
+        color: #00635d;
+        text-decoration: none;
+      }
+      .footer a:hover {
+        text-decoration: underline;
+      }
+
+      @media (max-width: 640px) {
+        .content,
+        .header {
+          padding-left: 24px;
+          padding-right: 24px;
+        }
+        .detail-row {
+          flex-direction: column;
+        }
+        .detail-label {
+          margin-bottom: 4px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="top">
+        <div class="avatar"></div>
+        <div>
+          <div class="sender">
+            goodreads.com &lt;account-update@goodreads.com&gt;
+          </div>
+          <div style="font-size: 13px; color: #6b6f76">kepada saya</div>
+        </div>
+        <div class="meta">09:16</div>
+      </div>
+
+      <div class="header">
+        <a href="https://goodreads.com" class="logo" onclick="return false;"
+          >goodreads
+        </a>
+      </div>
+
+      <div class="content">
+        <p class="greeting">John Doe,</p>
+
+        <p class="message">Seseorang telah masuk ke akun Anda.</p>
+
+        <div class="details-box">
+          <div class="detail-row">
+            <span class="detail-label">Kapan:</span>
+            <span class="detail-value"
+              >Nov 11, 2025 09:16 AM Western Indonesia Time</span
+            >
+          </div>
+          <div class="detail-row">
+            <span class="detail-label">Perangkat:</span>
+            <span class="detail-value">Amazon Shopping App for Android</span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-label">Lokasi:</span>
+            <span class="detail-value">Jakarta, Indonesia</span>
+          </div>
+        </div>
+
+        <p class="footer-message">
+          Jika ini memang Anda, abaikan pesan ini.
+          <a href="https://help.goodreads.com/s/" onclick="return false;"
+            >Jika bukan, beri tahu kami.</a
+          >
+        </p>
+
+        <div class="safety-box">
+          <div class="safety-title">Apakah aman mengikuti tautan ini?</div>
+          <p class="safety-text">
+            Tautan yang disertakan dalam email ini diawali dengan
+            "https://goodreads.com". Jika Anda lebih memilih, salin tautan
+            berikut dan tempel ke peramban untuk melihatnya.
+          </p>
+          <div class="safety-link">
+            https://goodreads.com/a/c/r/vlstuyYZLonyMdT7awd0X10v9
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

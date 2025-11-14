@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pesan WhatsApp - Tokopedia Promo 11.11</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial, sans-serif;
+        background: linear-gradient(to bottom, #c5c5ca 0%, #b1b1b6 100%);
+        /* padding: 20px 16px; */
+        min-height: 100vh;
+      }
+
+      .whatsapp-header {
+        background: #008069;
+        padding: 10px 16px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        color: white;
+      }
+
+      .back-btn {
+        font-size: 24px;
+        cursor: pointer;
+        color: white;
+      }
+
+      .sender-info {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        flex: 1;
+      }
+
+      .avatar {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+      }
+
+      .avatar img {
+        width: 50px;
+        height: 50px;
+        object-fit: contain;
+      }
+
+      .sender-name {
+        font-size: 16px;
+        font-weight: 500;
+        color: white;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+      }
+
+      .verified-badge {
+        width: 16px;
+        height: 16px;
+        background: #25d366;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 10px;
+      }
+
+      .more-options {
+        font-size: 24px;
+        color: white;
+        cursor: pointer;
+      }
+
+      #phoneScreen {
+        background: #ece5dd;
+        width: 375px;
+        height: 100vh;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .chat-area {
+        flex: 1;
+        padding: 12px 12px 60px 12px;
+        overflow-y: auto;
+      }
+
+      .unread-divider {
+        display: flex;
+        align-items: center;
+        margin: 12px 0;
+        gap: 8px;
+      }
+
+      .unread-line {
+        flex: 1;
+        height: 1px;
+        background: #d1d7db;
+      }
+
+      .unread-text {
+        color: #667781;
+        font-size: 12px;
+        text-transform: uppercase;
+        padding: 0 8px;
+        background: #ece5dd;
+      }
+
+      .message-bubble {
+        background: #dcf8c6;
+        border-radius: 8px;
+        max-width: 320px;
+        box-shadow: 0 1px 0.5px rgba(0, 0, 0, 0.13);
+        overflow: hidden;
+        margin-bottom: 12px;
+      }
+
+      .link-preview {
+        background: white;
+        cursor: pointer;
+        overflow: hidden;
+      }
+
+      .preview-image {
+        width: 100%;
+        height: auto;
+        display: block;
+        background: #e0e0e0;
+        min-height: 200px;
+      }
+
+      .preview-content {
+        padding: 8px 12px;
+        background: white;
+        border-bottom: 1px solid #e0e0e0;
+      }
+
+      .preview-title {
+        font-size: 14px;
+        font-weight: 500;
+        color: #039be5;
+        margin-bottom: 2px;
+      }
+
+      .preview-url {
+        font-size: 12px;
+        color: #667781;
+        word-break: break-all;
+      }
+
+      .message-text {
+        padding: 6px 12px 5px 12px;
+        position: relative;
+        background: #dcf8c6;
+      }
+
+      .message-content {
+        color: #111b21;
+        font-size: 14.2px;
+        line-height: 1.4;
+      }
+
+      .emoji-icon {
+        font-size: 16px;
+      }
+
+      .read-more {
+        color: #039be5;
+        cursor: pointer;
+      }
+
+      .warning-text {
+        color: #667781;
+        font-size: 13px;
+        margin-top: 8px;
+        font-style: italic;
+      }
+
+      .message-time {
+        font-size: 11px;
+        text-align: end;
+        color: #667781;
+        border-bottom: 1px solid #a2c08e;
+      }
+
+      .shop-button {
+        background: #dcf8c6;
+        color: #03b3d9;
+        border: none;
+        padding: 8px 30px;
+        font-size: 13px;
+        font-weight: 600;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        margin: auto;
+      }
+
+      .shop-button:active {
+        transform: scale(0.98);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="phoneScreen">
+      <div class="whatsapp-header">
+        <div class="back-btn">‹</div>
+        <div class="sender-info">
+          <div class="avatar">
+            <img src="../assets/logo/logo-tokopedia.png" alt="Tokopedia" />
+          </div>
+          <div class="sender-name">
+            Tokopedia
+            <div class="verified-badge">✓</div>
+          </div>
+        </div>
+        <div class="more-options">⋮</div>
+      </div>
+
+      <div class="chat-area">
+        <div class="message-bubble">
+          <div class="link-preview">
+            <img
+              src="../assets/image/tokopedia-promo-1111.png"
+              alt="Promo Guncang 11.11"
+              class="preview-image"
+            />
+            <div class="preview-content">
+              <div class="preview-title">Promo Guncang 11.11</div>
+              <div class="preview-url">www.tokopedia.com</div>
+            </div>
+          </div>
+
+          <div class="message-text">
+            <div class="message-content">
+              <strong
+                >mikha, belanjaanmu bisa dibayarin Tokopedia di GUNCANG
+                11.11</strong
+              >
+              <br /><br />
+              <span class="emoji-icon">🎉</span>
+              <span>Voucher belanja RATUSAN...</span>
+              <span class="read-more">Read more</span>
+              <br /><br />
+              <span class="warning-text">Pesan ini jangan dibalas, ya</span>
+            </div>
+            <div class="message-time">12:42 PM</div>
+
+            <a
+              href="https://www.tokopedia.com/"
+              onclick="return false;"
+              style="text-decoration: none"
+            >
+              <button class="shop-button">
+                <span style="font-size: 16px">&UpperRightArrow;</span> BELANJA
+                SEKARANG
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

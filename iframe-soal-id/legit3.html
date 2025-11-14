@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Android Developers - Gemini di IDE Anda</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        height: 100%;
+        font-family: "Google Sans", Roboto, Arial, sans-serif;
+        background: #f8f9fa;
+        color: #202124;
+      }
+      .container {
+        max-width: 700px;
+        margin: 0 auto;
+        background: #ffffff;
+        min-height: 100vh;
+      }
+      /* email-like header styles (avatar, sender, meta) */
+      .top {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 16px 20px;
+        border-bottom: 1px solid #e8eaed;
+      }
+      .avatar {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: #dadce0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        font-weight: 600;
+        font-size: 16px;
+        color: #5f6368;
+      }
+      .sender {
+        font-weight: 600;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        color: #202124;
+      }
+      .meta {
+        margin-left: auto;
+        color: #5f6368;
+        font-size: 12px;
+      }
+      .account-info {
+        font-size: 13px;
+        color: #5f6368;
+      }
+      /* Main content area with image and text side by side */
+      .main-content {
+        display: flex;
+        padding: 60px 40px;
+        gap: 40px;
+        align-items: center;
+      }
+      .image-section {
+        flex: 0 0 300px;
+      }
+      .image-section img {
+        width: 300px;
+        border-radius: 15px;
+      }
+      .main-description {
+        font-size: 16px;
+        color: #5f6368;
+        line-height: 1.6;
+        margin-bottom: 28px;
+      }
+      .cta-button {
+        display: inline-block;
+        background: #1a73e8;
+        color: white;
+        padding: 12px 32px;
+        border-radius: 4px;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 14px;
+        letter-spacing: 0.25px;
+        transition: background 0.2s;
+      }
+      .cta-button:hover {
+        background: #1765cc;
+      }
+      .footer {
+        padding: 30px 40px;
+        background: #f8f9fa;
+        text-align: center;
+        font-size: 12px;
+        color: #5f6368;
+        line-height: 1.6;
+        border-top: 1px solid #e8eaed;
+      }
+      .footer a {
+        color: #1a73e8;
+        text-decoration: none;
+      }
+      .footer a:hover {
+        text-decoration: underline;
+      }
+
+      @media (max-width: 640px) {
+        .main-content {
+          flex-direction: column;
+          padding: 40px 24px;
+        }
+        .image-section {
+          flex: 0 0 auto;
+          width: 100%;
+          max-width: 280px;
+        }
+        .main-title {
+          font-size: 28px;
+        }
+        .boost-text {
+          font-size: 42px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="top">
+        <div class="avatar">A</div>
+        <div>
+          <div class="sender">Android Developers</div>
+          <div class="account-info">developer.android.com</div>
+        </div>
+      </div>
+
+      <div class="main-content">
+        <div class="image-section">
+          <img src="../assets/image/gemini-ad.png" />
+        </div>
+
+        <div class="text-section">
+          <h1 class="main-title">Gemini is in your IDE</h1>
+          <p class="main-description">
+            AI assistance at your fingertips, available in Android Studio. Learn
+            more.
+          </p>
+          <a
+            href="https://www.googleadservices.com/pagead/aclk?sa=L&ai=CkCZ9ChISafX1KreutOUPrY-a6A316fz9ggGKkfjejBWwkB8QASCGj4ACYOmi4oPgDaABmfOg_ALIAQGoAwGqBPMBT9BMFldT0O7qvi7pFzj3EWZ0tS0lvwoPqoziiddEOR8qqFdu8oWvfDcrJVIXwdeXnrxrFedMb-51n2qssjjfdq2FhQYKEfLI8NVpi61-sLFMa5rGROqP0afeZW-DLHV-7SAGSOdzEtOGgmfXbCC--vconvr3DGhP6Ou0iU9l9Q8HR1JTDpdEQfjvV6a44NZf-w_56OZ-CNOhXvoCcYzoui0MHS2fZuqlxGLudSiJ1mmrr7qRsVtgf_NPzY0c-EYMBswJrDPPwyNq_zVjemn4Rd85vD0ZuKsqefiPoTLmz91uwocDfAVHRlZZaQoUXFg9yUQBwATq14XxuwWIBa7e7_pVkAYBoAZugAfPjN-DAYgHAZAHAqgHs5ixAqgHpr4bqAfMzrECqAfz0RuoB5bYG6gHqpuxAqgHjs4bqAeT2BuoB-DgG6gH8OAbqAfulrECqAf-nrECqAedubECqAevvrECqAfqx7ECqAfr0bECqAeT17ECqAel2rECqAfVyRuoB9m2sQKoB5oGqAeYxbECqAf_nrECqAffn7ECqAe2rbECqAfKqbECqAemv7ECqAfrpbECqAfqsbECqAeZtbECqAe-t7ECqAf4wrECqAf7wrEC2AcBqAgB0ggyCAAQAhhCMgiAgICAgICACDoSv_GAgICABIDAgICAgICAAqoBSLfmvyFY0u-u3v_nkAOaCS9odHRwczovL2RldmVsb3Blci5hbmRyb2lkLmNvbS9nZW1pbmktaW4tYW5kcm9pZLEJdx6Q7WZ3sZuAChPICwXQCyzgCwHaDBYKChCwu6Tbz8v_7U0SAgEDQAFKAhsj6AwJmg0BLKoNAklEyA0BiA7___________8B2BMMiBQBqBUB0BUByhYCCgD4FgGAFwGyFwIYAboXAjgBshgFGG4iAQHQGAGSGRAKDggFEK7e7_pVGI7G_IMBwhkCCAE&ase=2&gclid=CjwKCAiAt8bIBhBpEiwAzH1w6VxHlNKYn-OsMALNIexKt5xb_NqwZJ97LF-tjNFjAw6UotesCqeBgxoC3UgQAvD_BwE&num=1&cid=CAQShgEAwksa0exNjuUsFUa9-irIl7KQp-Cot1NkmllooXu921IxZ5pj--UZ_11zim3wS_6p9cMZXucLt6_V_Ud7vGUx5nL7X77qu0q1CFwpp9r6l52ItgxwlFxQmgFO5INCwBrpm0UQrQpkw_6IsJ2of3xJaBktvyOEhv4vL0tRLdqSvqpt3fRVuBgB&sig=AOD64_0qwQ81bgr9G9gri6FHFmT9ku7yfA&client=ca-gmail&label=gmail_message_ad_external_click_v2&adurl=https%3A%2F%2Fad.doubleclick.net%2Fsearchads%2Flink%2Fclick%3Flid%3D58700008962259951%26ds_a_cid%3D276767502%26ds_a_caid%3D23074697006%26ds_a_agid%3D187873455082%26ds_a_fiid%3D%26ds_a_lid%3Daud-2421956779370%26ds_a_extid%3D%26%26ds_e_adid%3D776928241124%26ds_e_matchtype%3D%26ds_e_device%3Dc%26ds_e_network%3D%26%26ds_url_v%3D2%26ds_dest_url%3Dhttps%3A%2F%2Fdeveloper.android.com%2Fgemini-in-android%3Fgclsrc%3Daw.ds%26gad_source%3D0%26gad_campaignid%3D23074697006"
+            class="cta-button"
+            onclick="return false;"
+            >Learn more</a
+          >
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pesan SMS - Pemenang Shopee</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial, sans-serif;
+        background: linear-gradient(to bottom, #c5c5ca 0%, #b1b1b6 100%);
+        /* padding: 20px 16px; */
+        min-height: 100vh;
+      }
+
+      .sms-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 16px;
+        gap: 12px;
+      }
+
+      .back-btn {
+        width: 24px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        color: #007aff;
+        cursor: pointer;
+      }
+
+      .sender-info {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        flex: 1;
+      }
+
+      .avatar {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: #007aff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 20px;
+      }
+
+      .sender-name {
+        font-size: 16px;
+        font-weight: 600;
+        color: #000;
+      }
+
+      .timestamp {
+        font-size: 11px;
+        color: #8e8e93;
+        text-align: center;
+        margin-bottom: 12px;
+      }
+
+      .message-bubble {
+        background: #007aff;
+        color: white;
+        padding: 12px 16px;
+        border-radius: 18px;
+        max-width: 85%;
+        margin-bottom: 4px;
+        line-height: 1.4;
+        font-size: 15px;
+        word-wrap: break-word;
+      }
+
+      .message-bubble a {
+        color: #ffffff;
+        text-decoration: underline;
+        word-break: break-all;
+      }
+
+      .message-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      #phoneScreen {
+        background: linear-gradient(to bottom, #e5e5ea 0%, #d1d1d6 100%);
+        width: 375px;
+        height: 100vh;
+        padding: 20px;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body class="d-flex justify-content-center">
+    <div id="phoneScreen">
+      <div class="sms-header">
+        <div class="back-btn">‹</div>
+        <div class="sender-info">
+          <div class="avatar">+62</div>
+          <div class="sender-name">+62 819 38109538</div>
+        </div>
+      </div>
+
+      <div class="timestamp">08:09</div>
+
+      <div class="message-container">
+        <div class="message-bubble">
+          Maaf Kami Sdh Menghubungi Anda Tapi Tdk Tersambung. Anda Pemenang Ke-2
+          Dari PT.SHOPEE INDONESIA Dengan Kode ID (J7K2B59) U/ Info Klik:
+          <br /><br />
+          <a
+            href="http://bit.ly/pemenangundian2"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            bit.ly/pemenangundian2
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

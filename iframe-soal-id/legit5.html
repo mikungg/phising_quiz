@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>X - Notifikasi Sign-in</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        height: 100%;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Helvetica, Arial, sans-serif;
+        background: #ffffff;
+        color: #0f1419;
+      }
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        background: #ffffff;
+        min-height: 100vh;
+      }
+      /* email-like header styles (avatar, sender, meta) */
+      .top {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 16px 20px;
+        border-bottom: 1px solid #e8e8e8;
+      }
+      .avatar {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: #f4f1ea;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        font-weight: 600;
+        font-size: 16px;
+        color: #382110;
+      }
+      .sender {
+        font-weight: 600;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+      .meta {
+        margin-left: auto;
+        color: #666666;
+        font-size: 12px;
+      }
+      .account-info {
+        font-size: 13px;
+        color: #666666;
+      }
+
+      /* Header with logo */
+      .header {
+        padding: 24px 32px;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+      }
+      .x-logo {
+        width: 32px;
+        height: 32px;
+        background: #000000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 4px;
+      }
+
+      /* Main content */
+      .content {
+        padding: 32px 32px 48px;
+      }
+      .main-title {
+        font-size: 20px;
+        font-weight: 700;
+        color: #0f1419;
+        margin-bottom: 16px;
+        line-height: 1.4;
+      }
+      .username {
+        color: #536471;
+      }
+
+      .section-title {
+        font-size: 15px;
+        font-weight: 700;
+        color: #0f1419;
+        margin-top: 24px;
+        margin-bottom: 12px;
+      }
+
+      .info-row {
+        display: flex;
+        margin-bottom: 8px;
+        font-size: 15px;
+      }
+      .info-label {
+        color: #536471;
+        min-width: 90px;
+        margin-right: 12px;
+      }
+      .info-value {
+        color: #0f1419;
+        flex: 1;
+      }
+
+      .notice-text {
+        font-size: 15px;
+        color: #0f1419;
+        line-height: 1.5;
+        margin-top: 24px;
+        margin-bottom: 8px;
+      }
+
+      .action-section {
+        margin-top: 32px;
+        padding-top: 24px;
+        border-top: 1px solid #eff3f4;
+      }
+      .action-title {
+        font-size: 15px;
+        font-weight: 700;
+        color: #0f1419;
+        margin-bottom: 16px;
+      }
+      .action-list {
+        list-style: none;
+        padding-left: 0;
+      }
+      .action-list li {
+        margin-bottom: 12px;
+        font-size: 15px;
+        line-height: 1.5;
+        color: #0f1419;
+      }
+      .action-link {
+        color: #1d9bf0;
+        text-decoration: none;
+        font-weight: 400;
+      }
+      .action-link:hover {
+        text-decoration: underline;
+      }
+
+      .footer {
+        padding: 24px 32px;
+        text-align: center;
+        font-size: 13px;
+        color: #536471;
+        line-height: 1.6;
+        border-top: 1px solid #eff3f4;
+      }
+      .footer a {
+        color: #1d9bf0;
+        text-decoration: none;
+      }
+      .footer a:hover {
+        text-decoration: underline;
+      }
+      .footer-note {
+        margin-top: 16px;
+        font-size: 12px;
+        color: #536471;
+      }
+
+      @media (max-width: 640px) {
+        .content,
+        .header {
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+        .info-row {
+          flex-direction: column;
+        }
+        .info-label {
+          margin-bottom: 4px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="top">
+        <div class="avatar"></div>
+        <div>
+          <div class="sender">X &lt;verify@x.com&gt;</div>
+          <div style="font-size: 13px; color: #6b6f76">kepada saya</div>
+        </div>
+        <div class="meta">09:51</div>
+      </div>
+
+      <div class="header">
+        <div class="x-logo">
+          <img
+            src="../assets/logo/logo-x.png"
+            alt="X Logo"
+            style="width: 40px; height: 40px"
+          />
+        </div>
+      </div>
+
+      <div class="content">
+        <h1 class="main-title">
+          Kami mendeteksi login ke akun Anda
+          <span class="username">@johndoe</span> dari perangkat baru. Apakah ini
+          Anda?
+        </h1>
+
+        <div class="section-title">Login baru</div>
+
+        <div class="info-row">
+          <span class="info-label">Lokasi*</span>
+          <span class="info-value">Genteng, Indonesia</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Perangkat</span>
+          <span class="info-value">ChromeDesktop di Windows</span>
+        </div>
+
+        <p
+          class="notice-text"
+          style="font-size: 13px; color: #536471; font-style: italic"
+        >
+          *Lokasi adalah perkiraan berdasarkan alamat IP login.
+        </p>
+
+        <div class="section-title" style="margin-top: 32px">
+          Jika ini adalah Anda
+        </div>
+        <p class="notice-text">
+          Anda dapat mengabaikan pesan ini. Tidak perlu melakukan tindakan apa
+          pun.
+        </p>
+
+        <div class="action-section">
+          <div class="action-title">Jika ini bukan Anda</div>
+          <p class="notice-text" style="margin-top: 0; margin-bottom: 16px">
+            Selesaikan langkah-langkah ini sekarang untuk melindungi akun Anda.
+          </p>
+          <ul class="action-list">
+            <li>
+              <a
+                href="https://twitter.com/i/redirect?url=https%3A%2F%2Ftwitter.com%2Faccount%2Fconfirm_email_reset%3Freset_type%3De%26amp%3Bpassword_reset_cause%3Dlogin_notification%26amp%3Buser_id%3D1555857312765853696%26amp%3Btoken%3D7bi0ybzv8lDS%2521Tu9Qe4z1yBlmD5O7uBdubC4fWFvrt0%253D-1757991082928%26amp%3Btoken_version%3D0%26amp%3Bconfirm_pending_email%3D0&t=1&cn=bG9naW5fbm90aWZpY2F0aW9uX2VtYWls&sig=609fd1fbde9b370e57ea5104acae267b08bd8dd8&iid=d7211462dcc046f3817905266c0530ba&uid=1555857312765853696&nid=296+4"
+                class="action-link"
+                onclick="return false;"
+                >Ubah kata sandi Anda</a
+              >. Anda akan keluar dari semua sesi X aktif Anda kecuali yang
+              sedang Anda gunakan saat ini.
+            </li>
+            <li>
+              <a
+                href="https://t.co/redirect?url=https%3A%2F%2Fx.com%2Fsettings%2Fapplications&t=1&cn=bG9naW5fbm90aWZpY2F0aW9uX2VtYWls&sig=e6bdcab752acbc5aa18dde1f192cd5d82bac931f&iid=d7211462dcc046f3817905266c0530ba&uid=1555857312765853696&nid=296+3"
+                class="action-link"
+                onclick="return false;"
+                >Tinjau aplikasi</a
+              >
+              yang memiliki akses ke akun Anda dan cabut akses ke aplikasi yang
+              tidak dikenal.
+              <a
+                href="https://help.x.com/managing-your-account/connect-or-revoke-access-to-third-party-apps"
+                class="action-link"
+                onclick="return false;"
+                >Pelajari lebih lanjut</a
+              >.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer">
+        <p>
+          <a
+            href="https://support.twitter.com/articles/76036"
+            onclick="return false;"
+            >Bantuan</a
+          >
+          |
+          <a
+            href="https://t.co/redirect?url=https%3A%2F%2Fsupport.x.com%2Farticles%2F204820-fake-twitter-emails&t=1&cn=bG9naW5fbm90aWZpY2F0aW9uX2VtYWls&sig=6e75bb6dd7505a240dd92e20093a61ada1aa5851&iid=d7211462dcc046f3817905266c0530ba&uid=1555857312765853696&nid=296+6"
+            onclick="return false;"
+            >Tips keamanan email</a
+          >
+        </p>
+        <p class="footer-note">Kami mengirim email ini ke @uraveragemikha</p>
+        <p class="footer-note">
+          X Corp. 1355 Market Street, Suite 900 San Francisco, CA 94103
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

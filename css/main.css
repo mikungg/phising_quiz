@@ -1,0 +1,14 @@
+.text-green {
+  color: #22c55e;
+}
+
+/* Utility to make buttons inside a container share equal width */
+.btn-equal-row {
+  display: flex;
+  gap: 2rem;
+}
+.btn-equal-row .btn {
+  flex: 1 1 0%; /* allow buttons to grow/shrink equally */
+  font-weight: 400;
+  min-width: 0;
+}
