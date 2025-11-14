@@ -262,7 +262,17 @@ def get_quiz_data(lang='id'):
     # Store in session for consistency during the quiz
     session['quiz_data'] = shuffled
     
-    return jsonify(shuffled)
+    # Remove penjelasan from the response to prevent client-side exposure
+    client_data = []
+    for q in shuffled:
+        client_data.append({
+            'judul': q['judul'],
+            'deskripsi': q['deskripsi'],
+            'soalHtml': q['soalHtml']
+            # jawaban and penjelasan excluded
+        })
+    
+    return jsonify(client_data)
 
 @app.route('/api/check-answer/<lang>', methods=['POST'])
 def check_answer(lang='id'):
@@ -571,17 +581,17 @@ quiz_data_en = [
 ]
 
 flag_data = [
-    '4OENjTeS1C',
-    'Dh3mJX8r4T',
-    'jjI2a1Iqdf',
-    'wQJSYi0WoK',
-    'JKsn22reZh',
-    'CBomPh3lYA',
-    'r37Ly2dNKY',
-    'X8MvFX4pxD',
-    'lRMxffSDvR',
-    'YElHNicvoh',
-    'Jlrdp8QGLF'
+    '4OENj',
+    'Dh3mJ',
+    'jjI2a',
+    'wQJSY',
+    'JKsn2',
+    'CBomP',
+    'r37Ly',
+    'X8MvF',
+    'lRMxf',
+    'YElHN',
+    'Jlrdp'
 ]
 
 if __name__ == '__main__':
