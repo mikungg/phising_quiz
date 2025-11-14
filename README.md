@@ -42,7 +42,7 @@ phising-quiz/
 ### 1. Clone or Download the Project
 
 ```bash
-cd "C:\Users\Mikha\Documents\Work\ITS NABU\phising-quiz"
+cd "phising-quiz"
 ```
 
 ### 2. Create Virtual Environment
