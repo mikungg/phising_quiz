@@ -1,3 +1,6 @@
+// Detect language from URL
+const lang = window.location.pathname.includes("/id/") ? "id" : "en";
+
 let shuffledQuizData = [];
 
 let score = 0;
@@ -43,7 +46,7 @@ async function handleAnswer(choice) {
 
   try {
     // Call Flask API to validate answer
-    const response = await fetch("/api/check-answer", {
+    const response = await fetch(`/api/check-answer/${lang}`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -61,7 +64,7 @@ async function handleAnswer(choice) {
 
     if (isCorrect) {
       // Fetch the current flag from API
-      const flagResponse = await fetch("/api/get-flag", {
+      const flagResponse = await fetch(`/api/get-flag`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -75,8 +78,14 @@ async function handleAnswer(choice) {
 
       const flagResult = await flagResponse.json();
 
-      explainText.textContent = "Benar! " + result.penjelasan;
-      explainModalLabel.textContent = "Benar! ";
+      if (lang === "id") {
+        explainText.textContent = "Benar! " + result.penjelasan;
+        explainModalLabel.textContent = "Benar! ";
+      } else if (lang === "en") {
+        explainText.textContent = "Correct! " + result.penjelasan;
+        explainModalLabel.textContent = "Correct! ";
+      }
+
       flagText.textContent = "Flag: " + flagResult.flag;
       nextBtn.textContent = "Next";
 
@@ -85,10 +94,16 @@ async function handleAnswer(choice) {
 
       shuffledQuizData.shift(); // remove the current question
     } else {
-      explainText.textContent = "Salah. " + result.penjelasan;
-      explainModalLabel.textContent = "Salah. ";
+      if (lang === "id") {
+        explainText.textContent = "Salah. " + result.penjelasan;
+        explainModalLabel.textContent = "Salah. ";
+      } else if (lang === "en") {
+        explainText.textContent = "Wrong. " + result.penjelasan;
+        explainModalLabel.textContent = "Wrong. ";
+      }
+
       flagText.textContent = "";
-      nextBtn.textContent = "Coba Lagi";
+      nextBtn.textContent = lang === "id" ? "Coba Lagi" : "Try Again";
 
       shuffledQuizData.shift(); // remove the current question
       shuffledQuizData.push(q); // add it to the end
@@ -135,7 +150,7 @@ nextBtn.addEventListener("click", () => {
 
 // Fetch shuffled quiz data from Flask API and initialize
 async function initQuiz() {
-  const quizResponse = await fetch("/api/quiz-data", {
+  const quizResponse = await fetch(`/api/quiz-data/${lang}`, {
     method: "GET",
     headers: {
       Accept: "application/json",

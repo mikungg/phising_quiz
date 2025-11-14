@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Dropbox shared folder</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html,
+      body {
+        height: 100%;
+        font-family: Roboto, Arial, sans-serif;
+        background: #fafafa;
+        color: #202124;
+      }
+      .wrap {
+        max-width: 920px;
+        margin: 24px auto;
+        background: #fff;
+        border-radius: 8px;
+        border: 1px solid #e6e6e6;
+        overflow: hidden;
+      }
+      .top {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 18px 24px;
+      }
+      .avatar {
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        background: #e9ecef;
+        color: #6b6f76;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+      }
+      .sender {
+        font-weight: 600;
+      }
+      .meta {
+        margin-left: auto;
+        color: #6b6f76;
+        font-size: 13px;
+      }
+      .panel {
+        padding: 36px 28px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+      }
+      .box {
+        width: 78%;
+        max-width: 520px;
+        border-radius: 6px;
+        border: 1px solid #e6eef8;
+        padding: 28px;
+        background: #fff;
+        text-align: center;
+      }
+      .dropbox-logo {
+        width: 64px;
+        height: 64px;
+        margin: 0 auto 8px;
+      }
+      .msg {
+        color: #202124;
+        font-size: 15px;
+        line-height: 1.6;
+        margin-bottom: 8px;
+      }
+      .cta {
+        display: inline-block;
+        background: #007ee5;
+        color: #fff;
+        padding: 12px 22px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 600;
+      }
+      .footer {
+        padding: 20px 28px;
+        color: #9aa0a6;
+        text-align: right;
+        font-size: 12px;
+      }
+      @media (max-width: 640px) {
+        .panel {
+          padding: 20px;
+        }
+        .box {
+          width: 92%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="top">
+        <div class="avatar">G</div>
+        <div>
+          <div class="sender">Dropbox &lt;no-reply@dropbox-online.net&gt;</div>
+          <div style="font-size: 13px; color: #6b6f76">to me</div>
+        </div>
+        <div class="meta">11:26 AM (2 minutes ago)</div>
+      </div>
+
+      <div class="panel">
+        <div class="box" role="article" aria-label="Dropbox shared folder">
+          <img
+            class="dropbox-logo"
+            src="../assets/logo/logo-dropbox.png"
+            alt="Dropbox logo"
+          />
+          <p class="msg">You have been invited to a shared Dropbox folder with this message:</p>
+          <p class="msg">
+            <blockquote style="font-style:italic;color:#666;margin:12px 0">"Here is the Dropbox link.<br/>Please copy and paste files to this folder.<br/><br/>Thank you"</blockquote>
+          </p>
+          <a class="cta" href="http://dropbox-online.net/importantfolder" target="_blank" rel="noopener noreferrer">VIEW FOLDER</a>
+        </div>
+      </div>
+      <div class="footer">© 2025 Dropbox</div>
+    </div>
+  </body>
+</html>

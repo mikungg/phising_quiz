@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WhatsApp Message - Wedding Invitation</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial, sans-serif;
+        background: linear-gradient(to bottom, #c5c5ca 0%, #b1b1b6 100%);
+        /* padding: 20px 16px; */
+        min-height: 100vh;
+      }
+
+      .sms-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 16px;
+        gap: 12px;
+      }
+
+      .back-btn {
+        width: 24px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        color: #007aff;
+        cursor: pointer;
+      }
+
+      .sender-info {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        flex: 1;
+      }
+
+      .avatar {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: #940436;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 20px;
+      }
+
+      .sender-name {
+        font-size: 16px;
+        font-weight: 600;
+        color: #000;
+      }
+
+      #phoneScreen {
+        background: #ece5dd;
+        width: 375px;
+        height: 100vh;
+        padding: 20px;
+        margin: 0 auto;
+      }
+
+      .message-container {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      .file-bubble {
+        background: #ffffff;
+        border-radius: 8px;
+        padding: 10px 12px;
+        max-width: 300px;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+        position: relative;
+        padding-bottom: 18px;
+      }
+
+      .file-content {
+        display: flex;
+        gap: 10px;
+        align-items: flex-start;
+        cursor: pointer;
+      }
+
+      .file-icon {
+        width: 40px;
+        height: 40px;
+        background: #f0f0f0;
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        flex-shrink: 0;
+        color: #8696a0;
+        font-weight: 600;
+      }
+
+      .file-info {
+        flex: 1;
+        min-width: 0;
+      }
+
+      .file-name {
+        font-size: 14px;
+        color: #111b21;
+        margin-bottom: 2px;
+        word-wrap: break-word;
+        line-height: 1.3;
+      }
+
+      .file-size {
+        font-size: 13px;
+        color: #667781;
+      }
+
+      .file-time {
+        position: absolute;
+        bottom: 4px;
+        right: 8px;
+        font-size: 11px;
+        color: #667781;
+      }
+
+      .text-bubble {
+        background: #ffffff;
+        border-radius: 8px;
+        padding: 6px 10px;
+        max-width: 300px;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+        position: relative;
+        padding-bottom: 16px;
+      }
+
+      .text-content {
+        font-size: 14.2px;
+        color: #111b21;
+        line-height: 1.3;
+      }
+
+      .text-time {
+        position: absolute;
+        bottom: 3px;
+        right: 8px;
+        font-size: 11px;
+        color: #667781;
+      }
+    </style>
+  </head>
+  <body class="d-flex justify-content-center">
+    <div id="phoneScreen">
+      <div class="sms-header">
+        <div class="back-btn">‹</div>
+        <div class="sender-info">
+          <div class="avatar">+62</div>
+          <div class="sender-name">+62 819 38109538</div>
+        </div>
+      </div>
+
+      <div class="message-container">
+        <!-- File APK Bubble -->
+        <div class="file-bubble">
+          <div class="file-content">
+            <div class="file-icon">APK</div>
+            <div class="file-info">
+              <div class="file-name">
+                Digital Wedding Invitation Letter .apk
+              </div>
+              <div class="file-size">6.6 MB</div>
+            </div>
+          </div>
+          <div class="file-time">12.50</div>
+        </div>
+
+        <!-- Text Message Bubble -->
+        <div class="text-bubble">
+          <div class="text-content">
+            We hope for your presence on our happy day
+          </div>
+          <div class="text-time">12.56</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

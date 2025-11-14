@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Nabu Phishing Quiz - EN</title>
+    <title>Nabu Phishing Quiz - ID</title>
     <link rel="icon" type="image/x-icon" href="../static/assets/favicon.ico" />
     <link rel="stylesheet" href="../static/bootstrap-5/css/bootstrap.min.css" />
     <link rel="stylesheet" href="../static/css/main.css" />
@@ -12,6 +12,22 @@
     <nav
       class="navbar navbar-expand-lg navbar-light bg-light justify-content-between"
     >
+      <ul class="navbar-nav pe-5" style="visibility: hidden">
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            >EN</a
+          >
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/id">ID</a></li>
+            <li><a class="dropdown-item" href="/en">EN</a></li>
+          </ul>
+        </li>
+      </ul>
+
       <div>
         <a
           class="navbar-brand"
@@ -29,6 +45,21 @@
           >Phishing Quiz</span
         >
       </div>
+      <ul class="navbar-nav pe-5">
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            >EN</a
+          >
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/id">ID</a></li>
+            <li><a class="dropdown-item" href="/en">EN</a></li>
+          </ul>
+        </li>
+      </ul>
     </nav>
 
     <section class="container d-flex justify-content-end">
@@ -40,18 +71,23 @@
     <main class="container my-4">
       <div class="row justify-content-center">
         <div class="text-center mb-4 row justify-content-center">
-          <h1 id="judul-soal" class="mb-3">QUESTION TITLE</h1>
+          <h1 id="judul-soal" class="mb-3">JUDUL SOAL</h1>
           <div class="col-md-9 text-center">
             <p id="deskripsi-soal" class="px-5" style="font-size: larger">
-              Short description of this sample question.
+              Deskripsi singkat tentang soal ini. Lorem ipsum dolor sit amet
+              consectetur adipisicing elit. Nemo mollitia magni provident
+              accusantium obcaecati doloribus aliquid sed in, nisi soluta dolor
+              voluptatem, quae ad, odit quo inventore quis eveniet facilis?
             </p>
           </div>
-          <img
-            id="image-soal"
-            src="../assets/image/phishing1.png"
-            alt="Sample Quiz"
-            class="img-fluid col-md-6 my-3"
-          />
+          <div id="soal-container" class="col-md-12 my-3" style="height: 600px">
+            <!-- soal dari js -->
+            <iframe
+              id="soal-iframe"
+              src=""
+              style="width: 100%; height: 100%; border: 0; display: block"
+            ></iframe>
+          </div>
         </div>
         <div class="col-md-6 text-center">
           <div class="btn-equal-row">
@@ -77,34 +113,24 @@
       <div class="modal-dialog modal-lg modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="explainModalLabel">Explanation</h5>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
+            <h5 class="modal-title" id="explainModalLabel"></h5>
           </div>
           <div class="modal-body">
             <p id="explain-text"></p>
+            <p id="flag-text" class="text-center h3"></p>
           </div>
           <div class="modal-footer">
             <button
               type="button"
-              class="btn btn-secondary"
-              data-bs-dismiss="modal"
-            >
-              Close
-            </button>
-            <button type="button" id="next-btn" class="btn btn-primary">
-              Next
-            </button>
+              id="next-btn"
+              class="btn btn-primary"
+            ></button>
           </div>
         </div>
       </div>
     </div>
 
     <script src="../static/bootstrap-5/js/bootstrap.bundle.min.js"></script>
-    <script src="../static/scripts/script-en.js"></script>
+    <script src="../static/scripts/script-id.js"></script>
   </body>
 </html>
